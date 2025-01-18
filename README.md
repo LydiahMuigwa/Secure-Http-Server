@@ -23,33 +23,34 @@ This project is a simple and secure HTTP server built with Node.js. It demonstra
 ```bash
 git clone https://github.com/your-username/secure-http-server.git
 cd secure-http-server
-2. Install dependencies:
+
+### 2. Install dependencies:
 Make sure you have Node.js installed. If not, you can download it from here.
 
 bash
 Copy
 Edit
 npm install
-3. Generate SSL certificates (Self-Signed for testing):
+### 3. Generate SSL certificates (Self-Signed for testing):
 Use OpenSSL to generate SSL certificates:
 
 bash
 Copy
 Edit
 openssl req -nodes -new -x509 -keyout key.pem -out cert.pem -days 365
-4. Run the server:
+### 4. Run the server:
 bash
 Copy
 Edit
 node server.js
 The server will start running on https://localhost:3000.
 
-5. Test the server:
+### 5. Test the server:
 Open your browser and navigate to:
 
 Valid input: https://localhost:3000/?name=Alice&email=alice@example.com&age=25
 Response: "Secure Hello, Alice!"
 Invalid input (e.g., non-alphabetic characters in name): https://localhost:3000/?name=1234&email=alice@example.com&age=25
 Response: "Invalid input: Name must only contain letters."
-6. Security Warning:
+### 6. Security Warning:
 Since the server uses a self-signed certificate, your browser will show a security warning. You can bypass this by clicking on Advanced > Proceed to localhost.
